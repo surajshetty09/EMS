@@ -1,0 +1,42 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Employee Modification</title>
+        <h:outputStylesheet name="css/styles.css" />
+    </h:head>
+    <style>
+        	.error{color:red}
+     </style>
+    <h:body id="emp-mod">
+        <h1>Employee Modification:</h1>
+        <h:form>
+        <h:messages styleClass="error" />
+            <h:panelGrid columns="2" cellpadding="5" styleClass="employee-modify-table">
+			    <h:outputLabel value="ID: " />
+			    <h:inputText  value="#{employeeBean.selectedEmployee.id}" readonly="true"/>
+			
+			    <h:outputLabel value="Name: " />
+			    <h:inputText label="Name" value="#{employeeBean.selectedEmployee.name}" required="true"/>
+			
+			    <h:outputLabel value="Email: " />
+			    <h:inputText label="Email" value="#{employeeBean.selectedEmployee.email}" required="true"/>
+			
+			    <h:outputLabel value="Department: " />
+			    <h:inputText  label="Department" value="#{employeeBean.selectedEmployee.department}" required="true"/>
+			
+			    <h:outputLabel value="Designation: " />
+			    <h:inputText label="Designation" value="#{employeeBean.selectedEmployee.designation}" required="true"/>
+			    
+			</h:panelGrid>
+
+            <br />
+            <div style="text-align: left;"> 
+            <h:commandButton value="Save" action="#{employeeBean.updateEmployee()}" style="margin-right: 10px;color:green;"
+                onclick="updateEmployeeDetails(); return true;" />
+            <h:commandLink value="Back to Home" action="#{employeeBean.toHome}" immediate="true"/>
+            </div>
+        </h:form>
+    </h:body>
+    
+</html>

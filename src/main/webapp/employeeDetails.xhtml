@@ -1,0 +1,63 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Employee Details</title>
+        <h:outputStylesheet name="css/styles.css" />
+        <script type="text/javascript">
+            function getParameterByName(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+
+            function displayEmployeeDetails() {
+                const employeeId = getParameterByName('employeeId');
+                const empName = getParameterByName('empName');
+                const empEmail = getParameterByName('empEmail');
+                const empDep = getParameterByName('empDep');
+                const empDesg = getParameterByName('empDesg');
+
+                if (employeeId) {
+                    document.getElementById('employeeId').innerText = employeeId;
+                }
+                if (empName) {
+                    document.getElementById('empName').innerText = empName;
+                }
+                if (empEmail) {
+                    document.getElementById('empEmail').innerText = empEmail;
+                }
+                if (empDep) {
+                    document.getElementById('empDep').innerText = empDep;
+                }
+                if (empDesg) {
+                    document.getElementById('empDesg').innerText = empDesg;
+                }
+            }
+
+            window.onload = displayEmployeeDetails;
+        </script>
+    </h:head>
+    <h:body id="emp-view">
+        <h1>Employee Details:</h1>
+        <h:form>
+        	<h:panelGrid columns="2" cellpadding="5" styleClass="employee-details-table">
+	            <h:outputLabel value="ID: " />
+	            <span id="employeeId"></span>
+	            <br />
+	            <h:outputLabel value="Name: " />
+	            <span id="empName"></span>
+	            <br />
+	            <h:outputLabel value="Email: " />
+	            <span id="empEmail"></span>
+	            <br />
+	            <h:outputLabel value="Department: " />
+	            <span id="empDep"></span>
+	            <br />
+	            <h:outputLabel value="Designation: " />
+	            <span id="empDesg"></span>
+            </h:panelGrid>
+            <br />
+            <h:commandLink value="Back to Home" action="#{employeeBean.toHome}" />
+        </h:form>
+    </h:body>
+</html>
