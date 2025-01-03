@@ -1,0 +1,211 @@
+/*.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #f2f2f2;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.data-table tr:hover {
+    background-color: #ddd;
+}*/
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0); /* Ensure all cells are transparent */
+}
+
+.data-table th {
+    background-color: rgba(242, 242, 242, 0.8); /* Set header background with transparency */
+}
+
+.data-table tr:nth-child(even) {
+    background-color: rgba(249, 249, 249, 0.5); /* Light grey with transparency for even rows */
+}
+
+.data-table tr:hover {
+    background-color: rgba(221, 221, 221, 0.5); /* Lighter grey with transparency on hover */
+}
+
+
+#home-page {
+    background-image: url("#{resource['images/Na_Dec_16.jpg']}");
+    background-size: 1250px 850px;/*cover; /* Ensure the image covers the entire page */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center center; /* Centers the image */
+    height: 100vh; /* Sets the height of the page to the full viewport height */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+
+#emp-form {
+    background-image: url("#{resource['images/add_emp3.jpg']}");
+    background-size: 800px 800px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    height: 100vh; /* Sets the height of the page to the full viewport height */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+#emp-view {
+    background-image: url("#{resource['images/view_emp.jpg']}");
+    /*background-size: cover;*/
+    background-size: 800px 800px;
+    background-repeat: no-repeat;
+    /*background-position: center;*/
+    background-position: right center;
+    height: 100vh; /* Sets the height of the page to the full viewport height */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+#emp-mod {
+    background-image: url("#{resource['images/mod_emp.jpg']}");
+    /*background-size: auto; /* Keeps the original size of the image */
+    /* Alternatively, you can specify dimensions like: */
+    background-size: 800px 800px; /* Set to desired width and height */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: right center; /* Positions the image to the right center */
+    height: 100vh; /* Sets the height of the page to the full viewport height */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+
+
+.actions button {
+    margin-right: 5px;
+}
+
+.employee-details-table {
+    width: 50%;
+    border-collapse: collapse;
+}
+
+.employee-details-table td, 
+.employee-details-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.employee-details-table tr:nth-child(even) {
+    background-color: rgba(249, 249, 249, 0.5); 
+}
+
+.employee-details-table tr:hover {
+    background-color: #ddd;
+}
+
+.employee-details-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Additional spacing between label and value */
+.employee-details-table td {
+    padding-left: 20px; /* Adjust this to increase space */
+}
+
+.employee-modify-table {
+    width: 50%; /* Set width to 50% for left alignment */
+    border-collapse: collapse; /* Collapse borders for a cleaner look */
+    margin: 20px 0; /* Add top and bottom margin, no horizontal margin */
+    padding: 20px; /* Add padding for better spacing */
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ccc; /* Light border around the panel */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    float: left top; /* Align the panel grid to the left */
+}
+
+.employee-modify-table h:outputLabel {
+    font-weight: bold; /* Make labels bold */
+    color: #333; /* Darker color for better readability */
+}
+
+.employee-modify-table input[type="text"] {
+    width: 100%; /* Make input fields full width */
+    padding: 8px; /* Adjust padding for comfort */
+    border: 1px solid #ccc; /* Light border for input fields */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Soft inner shadow */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.employee-modify-table input[type="text"]:focus {
+    border-color: #4CAF50; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.employee-modify-table h:outputLabel {
+    display: block; /* Ensure labels are block elements */
+    margin-bottom: 5px; /* Space below labels */
+    margin-top: 10px; /* Space above labels */
+}
+
+.employee-modify-table input[type="text"] {
+    margin-bottom: 15px; /* Space below input fields */
+}
+
+.employee-add-table {
+    width: 50%; /* Set width to 50% for left alignment */
+    border-collapse: collapse; /* Collapse borders for a cleaner look */
+    margin: 20px 0; /* Add top and bottom margin, no horizontal margin */
+    padding: 20px; /* Add padding for better spacing */
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ccc; /* Light border around the panel */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    float: left top; /* Align the panel grid to the left */
+}
+
+.employee-add-table h:outputLabel {
+    font-weight: bold; /* Make labels bold */
+    color: #333; /* Darker color for better readability */
+}
+
+.employee-add-table input[type="text"] {
+    width: 100%; /* Make input fields full width */
+    padding: 8px; /* Adjust padding for comfort */
+    border: 1px solid #ccc; /* Light border for input fields */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Soft inner shadow */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.employee-add-table input[type="text"]:focus {
+    border-color: #4CAF50; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.employee-add-table h:outputLabel {
+    display: block; /* Ensure labels are block elements */
+    margin-bottom: 5px; /* Space below labels */
+    margin-top: 10px; /* Space above labels */
+}
+
+.employee-add-table input[type="text"] {
+    margin-bottom: 15px; /* Space below input fields */
+}
