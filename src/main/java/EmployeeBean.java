@@ -66,7 +66,7 @@ public class EmployeeBean implements Serializable {
     	if(modFlag) {
     		goToModifyEmployeeFetch(this.selectedEmployee);
     	}
-    	System.out.println("In init() after calling : goToModifyEmployeeFetch");
+    	System.out.println("In init() after calling : goToModifyEmployeeFetch 2local");
     }
 
     public EmployeeBean() {
