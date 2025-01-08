@@ -35,7 +35,7 @@ public class EmployeeBean implements Serializable {
     public void init() {
     	//this.selectedEmployee.setName("Hello");
     	
-        System.out.println("EmployeeBean PostConstruct");
+        System.out.println("EmployeeBean PostConstruct1");
         
     	Database_con db = new Database_con();
     	String query = "SELECT * FROM employee";
